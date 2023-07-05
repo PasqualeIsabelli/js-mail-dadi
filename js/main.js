@@ -10,14 +10,15 @@ loginBtn.addEventListener('click', function () {
   
   const emailDaCercare = emailInputElement.value;
   
+  let emailDaVerificare = false;
+
   for (let i = 0; i < emailList.length; i++) {
-
     if (emailDaCercare === emailList[i]) {
-      console.log("Accesso consentito");
-    }
-    else if (emailDaCercare !== emailList[i]) { //perche non va?
-      console.log("Accesso rifiutato, riprova");
-    }
+      emailDaVerificare = true;
+    } 
   }
-
+    if (emailDaVerificare === true){
+      document.getElementById("message").innerHTML = "Accesso consentito"
+    } else{ document.getElementById("message").innerHTML = "Accesso rifiutato, riprova con un'altra mail"
+  }  
 });
