@@ -5,9 +5,6 @@ const runBtn = document.getElementById("run-btn");
 
 runBtn.addEventListener('click', function () {
 
-  document.getElementById("your-numbers").innerHTML = yourDice;
-  document.getElementById("pc-numbers").innerHTML = pcDice;
-  
   if (yourDice > pcDice){
     document.getElementById("message").innerHTML = "Hai Vinto!";
   } else if (yourDice == pcDice) {
@@ -15,4 +12,7 @@ runBtn.addEventListener('click', function () {
   } else {
     document.getElementById("message").innerHTML = "Hai Perso!";
   }
+
+  document.getElementById("your-numbers").innerHTML = yourDice;
+  document.getElementById("pc-numbers").innerHTML = pcDice;
 });
